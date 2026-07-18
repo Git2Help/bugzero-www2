@@ -1,0 +1,174 @@
+---
+import Layout from "../../components/Layout.astro";
+import Header from "../../components/Header.astro";
+import HeroSection from "../../components/HeroSection.astro";
+import ServiceCard from "../../components/ServiceCard.astro";
+import FeatureCard from "../../components/FeatureCard.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import CtaSection from "../../components/CtaSection.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="BugZero | Particulier - Dépannage informatique Monaco">
+  <Header />
+
+  <!-- Section 1: Hero -->
+  <HeroSection
+    badge="PARTICULIER"
+    title="Votre PC ne marche plus ?"
+    titleHighlight="On s'en occupe."
+    description="PC lent, virus, écran bleu, perte de données ? BugZero intervient à Monaco, Nice et Menton. Dépannage rapide et prix transparents."
+    ctaPrimary={{ label: "Prendre RDV", href: "/contact" }}
+    showStatusCard={false}
+  />
+
+  <!-- Section 2: Dépannage à distance -->
+  <section class="relative py-24 bg-neutral-50 border-t border-neutral-200 z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <SectionHeader
+        title="Dépannage à distance"
+        description="Pas besoin de vous déplacer. Nos techniciens prennent la main sur votre PC en toute sécurité."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <ServiceCard
+          icon="monitor"
+          iconBg="bg-[#EEF9FF]"
+          iconColor="text-[#00AEEF]"
+          title="Connexion sécurisée"
+          description="Connexion chiffrée de bout en bout via notre outil sécurisé. Vous voyez tout ce que nous faisons."
+        />
+        <ServiceCard
+          icon="clock"
+          iconBg="bg-[#F9FCE5]"
+          iconColor="text-[#C4D600]"
+          title="~30 minutes"
+          description="La plupart des problèmes courants sont résolus en moins de 30 minutes. PC lent, virus, installation."
+        />
+        <ServiceCard
+          icon="shield-check"
+          iconBg="bg-neutral-100"
+          iconColor="text-neutral-600"
+          title="Sans engagement"
+          description="Pas d'abonnement, pas de surprise. Vous payez uniquement l'intervention, sur devis préalable."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Dépannage sur site -->
+  <section class="relative py-24 bg-white z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-16 items-start">
+        <div class="lg:col-span-5 lg:sticky lg:top-32">
+          <h2 class="font-sans text-4xl font-bold tracking-tight text-neutral-900 mb-6">Dépannage sur site</h2>
+          <div class="w-20 h-1.5 bg-[#00AEEF] rounded-full mb-6"></div>
+          <p class="text-2xl text-neutral-800 font-semibold leading-snug">Nous venons chez vous.</p>
+          <p class="mt-4 text-lg text-neutral-600">Monaco, Nice, Menton et toute la région. Un technicien se déplace à votre domicile pour résoudre votre problème sur place.</p>
+        </div>
+        <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+          <FeatureCard
+            icon="map-pin"
+            title="Monaco"
+            description="Intervention dans tout Monaco, de Fontvieille au Larvotto. Intervention sous 2h ouvrées."
+          />
+          <FeatureCard
+            icon="map-pin"
+            iconColor="text-[#C4D600]"
+            title="Nice"
+            description="Dépannage à domicile sur Nice et sa métropole. Intervention sous 4h ouvrées."
+          />
+          <FeatureCard
+            icon="map-pin"
+            iconColor="text-neutral-600"
+            title="Menton"
+            description="Nous couvrons Menton et la vallée de la Roya. Intervention rapide sur rendez-vous."
+          />
+          <FeatureCard
+            icon="clock"
+            title="7j/7"
+            description="Interventions possibles le week-end et jours fériés pour les urgences."
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Maintenance préventive -->
+  <section class="relative py-24 bg-neutral-50 border-t border-neutral-200 z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <SectionHeader
+        title="Maintenance préventive"
+        description="Gardez votre PC en bonne santé avec nos formules d'entretien régulier."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <ServiceCard
+          icon="spray-can"
+          iconBg="bg-[#EEF9FF]"
+          iconColor="text-[#00AEEF]"
+          title="Nettoyage complet"
+          description="Nettoyage physique et logiciel : poussière, fichiers temporaires, registre, optimisation Windows."
+        />
+        <ServiceCard
+          icon="shield"
+          iconBg="bg-[#F9FCE5]"
+          iconColor="text-[#C4D600]"
+          title="Antivirus & Sécurité"
+          description="Installation et configuration d'un antivirus performant. Protection contre les ransomwares et malwares."
+        />
+        <ServiceCard
+          icon="hard-drive"
+          iconBg="bg-neutral-100"
+          iconColor="text-neutral-600"
+          title="Sauvegarde"
+          description="Mise en place d'une sauvegarde automatique de vos données importantes. Cloud ou disque externe."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Formation -->
+  <section class="relative py-24 bg-white z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <SectionHeader
+        title="Formation"
+        description="Apprenez à maîtriser vos outils du quotidien avec des formations adaptées à votre niveau."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <ServiceCard
+          icon="book-open"
+          iconBg="bg-[#EEF9FF]"
+          iconColor="text-[#00AEEF]"
+          title="Logiciels courants"
+          description="Word, Excel, PowerPoint, Outlook : maîtrisez les bases comme les fonctions avancées."
+        />
+        <ServiceCard
+          icon="edit-3"
+          iconBg="bg-[#F9FCE5]"
+          iconColor="text-[#C4D600]"
+          title="Traitement de texte"
+          description="Rédaction de courriers, CV, rapports. Mise en page professionnelle et modèles."
+        />
+        <ServiceCard
+          icon="dollar-sign"
+          iconBg="bg-neutral-100"
+          iconColor="text-neutral-600"
+          title="Comptabilité"
+          description="Initiation aux logiciels de comptabilité, gestion de budget et tableurs de suivi financier."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Contact -->
+  <CtaSection
+    title="Un problème informatique ?"
+    description="Contactez-nous dès maintenant. Intervention rapide à Monaco, Nice et Menton."
+    buttonLabel="Prendre rendez-vous"
+  />
+
+  <Footer
+    address="HBC, 33 Rue Grimaldi<br/>98000 Monaco"
+    phone="06 78 56 54 30"
+    email="contact@bugzero.fr"
+  />
+</Layout>

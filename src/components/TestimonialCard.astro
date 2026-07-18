@@ -1,0 +1,28 @@
+---
+export interface Props {
+  quote: string;
+  name: string;
+  role: string;
+}
+const { quote, name, role } = Astro.props;
+---
+
+<div class="p-8 bg-neutral-50 border border-neutral-100 rounded-2xl">
+  <div class="flex gap-1 text-[#C4D600] mb-4">
+    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+  </div>
+  <p class="text-neutral-600 italic mb-6">"{quote}"</p>
+  <div class="flex items-center gap-4">
+    <div class="w-12 h-12 bg-neutral-200 rounded-full flex items-center justify-center text-neutral-400">
+      <i data-lucide="user" class="w-6 h-6"></i>
+    </div>
+    <div>
+      <p class="font-bold text-neutral-900">{name}</p>
+      <p class="text-sm text-neutral-500">{role}</p>
+    </div>
+  </div>
+</div>

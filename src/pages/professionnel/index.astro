@@ -1,0 +1,240 @@
+---
+import Layout from "../../components/Layout.astro";
+import Header from "../../components/Header.astro";
+import HeroSection from "../../components/HeroSection.astro";
+import ServiceCard from "../../components/ServiceCard.astro";
+import FeatureCard from "../../components/FeatureCard.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import CtaSection from "../../components/CtaSection.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="BugZero | Professionnel - Infogérance informatique Monaco">
+  <Header />
+
+  <!-- Section 1: Hero -->
+  <HeroSection
+    badge="PROFESSIONNEL"
+    title="Votre partenaire IT"
+    titleHighlight="à Monaco"
+    description="BugZero accompagne les TPE, PME et ETI de Monaco et de la région. Audit gratuit, maintenance proactive et cybersécurité — tout est inclus."
+    ctaPrimary={{ label: "Contactez-nous", href: "/contact" }}
+    showStatusCard={false}
+  />
+
+  <!-- Section 2: Formules de maintenance -->
+  <section class="relative py-24 bg-neutral-50 border-t border-neutral-200 z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <SectionHeader
+        title="Formules de maintenance"
+        description="4 formules adaptées à la taille de votre entreprise. De la maintenance préventive à l'infogérance complète."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="bg-white border border-neutral-200 rounded-xl p-8 shadow-sm">
+          <h3 class="font-sans text-xl font-bold text-neutral-900 mb-2">Starter</h3>
+          <p class="text-3xl font-bold text-[#00AEEF] mb-4">199€<span class="text-base font-normal text-neutral-500">/mois</span></p>
+          <p class="text-neutral-600 text-sm mb-6">Maintenance préventive de base pour micro-entreprises.</p>
+          <ul class="space-y-2 text-sm text-neutral-600">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Supervision 5 postes</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Antivirus centralisé</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Support téléphonique</li>
+          </ul>
+        </div>
+        <div class="bg-white border border-neutral-200 rounded-xl p-8 shadow-sm">
+          <h3 class="font-sans text-xl font-bold text-neutral-900 mb-2">Business</h3>
+          <p class="text-3xl font-bold text-[#00AEEF] mb-4">499€<span class="text-base font-normal text-neutral-500">/mois</span></p>
+          <p class="text-neutral-600 text-sm mb-6">Pour PME avec serveur et besoins de sécurité renforcés.</p>
+          <ul class="space-y-2 text-sm text-neutral-600">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Supervision 15 postes</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Backup cloud quotidien</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Assistance 8h/5j</li>
+          </ul>
+        </div>
+        <div class="bg-white border border-neutral-200 rounded-xl p-8 shadow-sm">
+          <h3 class="font-sans text-xl font-bold text-neutral-900 mb-2">Premium</h3>
+          <p class="text-3xl font-bold text-[#00AEEF] mb-4">899€<span class="text-base font-normal text-neutral-500">/mois</span></p>
+          <p class="text-neutral-600 text-sm mb-6">Infogérance complète pour entreprises de taille intermédiaire.</p>
+          <ul class="space-y-2 text-sm text-neutral-600">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Supervision 30 postes</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Cybersécurité avancée</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Intervention sur site</li>
+          </ul>
+        </div>
+        <div class="bg-white border-2 border-[#00AEEF] rounded-xl p-8 shadow-md">
+          <div class="inline-block px-3 py-1 bg-[#EEF9FF] text-[#00AEEF] text-xs font-bold uppercase rounded-full mb-2">Recommandé</div>
+          <h3 class="font-sans text-xl font-bold text-neutral-900 mb-2">Enterprise</h3>
+          <p class="text-3xl font-bold text-[#00AEEF] mb-4">1299€<span class="text-base font-normal text-neutral-500">/mois</span></p>
+          <p class="text-neutral-600 text-sm mb-6">Solution sur mesure pour ETI avec infrastructure complexe.</p>
+          <ul class="space-y-2 text-sm text-neutral-600">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Supervision illimitée</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Audit mensuel + rapport</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-green-500"></i> Assistance 24h/7j</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: SécuriSite WP Pro -->
+  <section class="relative py-24 bg-white z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="font-sans text-4xl font-bold tracking-tight text-neutral-900 mb-4">SécuriSite WP Pro</h2>
+          <div class="w-20 h-1.5 bg-[#00AEEF] rounded-full mb-6"></div>
+          <p class="text-lg text-neutral-600 mb-4">Protection complète pour votre site WordPress : firewall, mises à jour automatiques, sauvegarde quotidienne et surveillance 24/7.</p>
+          <p class="text-3xl font-bold text-[#00AEEF] mb-6">99€<span class="text-base font-normal text-neutral-500">/mois</span></p>
+          <a href="/contact" class="inline-block px-8 py-4 bg-[#00AEEF] text-white font-sans font-medium text-lg rounded-md hover:bg-[#0090C0] transition-all">Souscrire</a>
+        </div>
+        <div class="flex justify-center">
+          <div class="w-full max-w-md bg-neutral-50 border border-neutral-200 rounded-xl p-8">
+            <div class="space-y-4">
+              <div class="flex items-center gap-3"><i data-lucide="shield-check" class="w-5 h-5 text-green-500"></i><span class="text-neutral-700">Firewall applicatif WAF</span></div>
+              <div class="flex items-center gap-3"><i data-lucide="rotate-ccw" class="w-5 h-5 text-green-500"></i><span class="text-neutral-700">Mises à jour automatiques</span></div>
+              <div class="flex items-center gap-3"><i data-lucide="hard-drive" class="w-5 h-5 text-green-500"></i><span class="text-neutral-700">Backup quotidien (30 jours)</span></div>
+              <div class="flex items-center gap-3"><i data-lucide="eye" class="w-5 h-5 text-green-500"></i><span class="text-neutral-700">Surveillance 24h/7j</span></div>
+              <div class="flex items-center gap-3"><i data-lucide="headset" class="w-5 h-5 text-green-500"></i><span class="text-neutral-700">Support prioritaire</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Cybersécurité -->
+  <section class="relative py-24 bg-neutral-50 border-t border-neutral-200 z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <SectionHeader
+        title="Cybersécurité"
+        description="Protection complète contre les cybermenaces, conforme RGPD et NIS2."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <ServiceCard
+          icon="search"
+          iconBg="bg-[#EEF9FF]"
+          iconColor="text-[#00AEEF]"
+          title="Test d'intrusion"
+          description="Simulation d'attaque complète de votre SI pour identifier les failles avant les pirates."
+        />
+        <ServiceCard
+          icon="shield"
+          iconBg="bg-[#F9FCE5]"
+          iconColor="text-[#C4D600]"
+          title="Bitdefender Business"
+          description="Solution antivirus nouvelle génération avec EDR, anti-ransomware et contrôle des applications."
+        />
+        <ServiceCard
+          icon="file-text"
+          iconBg="bg-neutral-100"
+          iconColor="text-neutral-600"
+          title="RGPD / NIS2"
+          description="Mise en conformité, audit des données, registre des traitements et accompagnement DPO externalisé."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Visibilité web -->
+  <section class="relative py-24 bg-white z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <SectionHeader
+        title="Visibilité web"
+        description="Développez votre présence en ligne avec des solutions adaptées à votre budget. Fonds Bleu : financement 30-70%."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <ServiceCard
+          icon="globe"
+          iconBg="bg-[#EEF9FF]"
+          iconColor="text-[#00AEEF]"
+          title="Création de site"
+          description="Sites vitrine, e-commerce ou sur mesure. Design responsive et optimisé pour le référencement."
+        />
+        <ServiceCard
+          icon="trending-up"
+          iconBg="bg-[#F9FCE5]"
+          iconColor="text-[#C4D600]"
+          title="SEO / SEA"
+          description="Optimisation pour les moteurs de recherche et campagnes Google Ads pour générer des leads qualifiés."
+        />
+        <ServiceCard
+          icon="percent"
+          iconBg="bg-neutral-100"
+          iconColor="text-neutral-600"
+          title="Fonds Bleu 30-70%"
+          description="Éligible au dispositif Fonds Bleu Monaco. Prise en charge de 30 à 70% de vos projets de transformation digitale."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Pack Infogérance -->
+  <section class="relative py-24 bg-[#EEF9FF] border-y border-neutral-200 z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="font-sans text-4xl font-bold tracking-tight text-neutral-900 mb-4">Pack Infogérance</h2>
+          <div class="w-20 h-1.5 bg-[#00AEEF] rounded-full mb-6"></div>
+          <p class="text-lg text-neutral-600 mb-6">Installation, maintenance et assistance complètes pour votre infrastructure IT. Inclut notre solution de backup cloud HelpBackup.</p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i><span class="text-neutral-700">Installation et configuration des serveurs et postes</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i><span class="text-neutral-700">Assistance technique 7j/7 — intervention sous 15 min</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i><span class="text-neutral-700">HelpBackup Cloud : sauvegarde externalisée chiffrée</span></li>
+          </ul>
+        </div>
+        <div class="flex justify-center">
+          <div class="w-full max-w-sm bg-white border border-neutral-200 rounded-xl p-8 shadow-md text-center">
+            <i data-lucide="cloud" class="w-16 h-16 text-[#00AEEF] mx-auto mb-4"></i>
+            <h3 class="text-2xl font-bold text-neutral-900 mb-2">HelpBackup Cloud</h3>
+            <p class="text-neutral-600 text-sm mb-4">Sauvegarde externalisée chiffrée de vos données critiques. Accès restitué en cas de sinistre.</p>
+            <p class="text-lg font-bold text-[#00AEEF]">À partir de 29€/mois</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: À propos / Équipe -->
+  <section class="relative py-24 bg-white z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <SectionHeader
+        title="Notre équipe"
+        description="Des experts passionnés au service de votre réussite numérique."
+      />
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="bg-neutral-50 border border-neutral-100 rounded-xl p-6 text-center">
+          <div class="w-20 h-20 bg-neutral-200 rounded-full mx-auto mb-4 flex items-center justify-center text-neutral-400"><i data-lucide="user" class="w-10 h-10"></i></div>
+          <h3 class="font-bold text-lg text-neutral-900">Johan</h3>
+          <p class="text-sm text-neutral-500">Fondateur &amp; Expert IT</p>
+        </div>
+        <div class="bg-neutral-50 border border-neutral-100 rounded-xl p-6 text-center">
+          <div class="w-20 h-20 bg-neutral-200 rounded-full mx-auto mb-4 flex items-center justify-center text-neutral-400"><i data-lucide="user" class="w-10 h-10"></i></div>
+          <h3 class="font-bold text-lg text-neutral-900">Paul</h3>
+          <p class="text-sm text-neutral-500">Cyber Sécurité</p>
+        </div>
+        <div class="bg-neutral-50 border border-neutral-100 rounded-xl p-6 text-center">
+          <div class="w-20 h-20 bg-neutral-200 rounded-full mx-auto mb-4 flex items-center justify-center text-neutral-400"><i data-lucide="user" class="w-10 h-10"></i></div>
+          <h3 class="font-bold text-lg text-neutral-900">Alex</h3>
+          <p class="text-sm text-neutral-500">Support &amp; Déploiement</p>
+        </div>
+        <div class="bg-neutral-50 border border-neutral-100 rounded-xl p-6 text-center">
+          <div class="w-20 h-20 bg-neutral-200 rounded-full mx-auto mb-4 flex items-center justify-center text-neutral-400"><i data-lucide="user" class="w-10 h-10"></i></div>
+          <h3 class="font-bold text-lg text-neutral-900">Camelia</h3>
+          <p class="text-sm text-neutral-500">Commerciale &amp; Relation Client</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Contact -->
+  <CtaSection
+    title="Prêt à sécuriser votre SI ?"
+    description="Contactez Johan au 06 78 56 54 30 ou passez nous voir au HBC, 33 Rue Grimaldi, Monaco."
+    buttonLabel="Demander un audit"
+  />
+
+  <Footer
+    address="HBC, 33 Rue Grimaldi<br/>98000 Monaco"
+    phone="06 78 56 54 30"
+    email="contact@bugzero.fr"
+  />
+</Layout>

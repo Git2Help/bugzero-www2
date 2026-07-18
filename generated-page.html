@@ -1,0 +1,475 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BugZero | Infogérance informatique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+      .font-sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='20' fill='%2300AEEF'/&gt;&lt;text x='50' y='70' font-size='65' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'&gt;B&lt;/text&gt;&lt;/svg&gt;">
+  </head>
+  <body class="font-sans text-neutral-800 bg-white antialiased overflow-x-hidden relative">
+    <!-- Background Floating Icons Layer -->
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-sm">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-1 group">
+          <div class="font-sans font-bold text-3xl tracking-tighter flex items-center select-none">
+            <span class="text-[#00AEEF]">BUG</span>
+            <span class="text-[#C4D600]">ZERO</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/services" class="font-sans font-medium text-lg hover:text-[#00AEEF] transition-colors">
+            Nos services
+          </a>
+          <a href="#about" class="font-sans font-medium text-lg hover:text-[#00AEEF] transition-colors">
+            Pourquoi BugZero
+          </a>
+          <a href="/contact" class="px-6 py-2.5 bg-[#00AEEF] text-white font-sans font-medium text-lg rounded-md hover:bg-[#0090C0] transition-colors">
+            Demander un audit
+          </a>
+        </div>
+
+        <!-- Mobile Menu Icon -->
+        <button class="md:hidden p-2 text-neutral-900 hover:text-[#00AEEF] transition-colors">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 overflow-hidden z-10">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div class="relative z-10 space-y-8">
+          <div class="inline-block px-4 py-1.5 bg-[#EEF9FF] border border-[#00AEEF]/20 rounded-full">
+            <span class="font-sans text-[#00AEEF] text-sm font-semibold uppercase tracking-wider">
+              TPE • PME • ETI
+            </span>
+          </div>
+          <h1 class="font-sans text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-neutral-900">
+            Votre informatique,
+            <br>
+            <span class="text-[#00AEEF]">notre sérénité.</span>
+          </h1>
+          <p class="text-xl text-neutral-600 leading-relaxed max-w-lg font-sans">
+            BugZero prend en charge vos serveurs, votre sécurité et votre
+            support informatique. Concentrez-vous sur votre métier, nous nous
+            occupons du reste.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a href="/contact" class="px-8 py-4 bg-[#00AEEF] text-white font-sans font-medium text-lg rounded-md hover:bg-[#0090C0] transition-all">
+              Demander un audit
+            </a>
+            <a href="/services" class="px-8 py-4 bg-white border-2 border-neutral-200 text-neutral-700 font-sans font-medium text-lg rounded-md hover:border-[#00AEEF] hover:text-[#00AEEF] transition-all">
+              Nos services
+            </a>
+          </div>
+        </div>
+        <div class="relative flex justify-center lg:justify-end">
+          <div class="w-full max-w-lg bg-white border border-neutral-200 rounded-2xl shadow-xl p-8 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-[#C4D600]"></div>
+            <div class="flex items-center gap-4 mb-8">
+              <div class="w-12 h-12 bg-[#EEF9FF] rounded-lg flex items-center justify-center text-[#00AEEF]">
+                <i data-lucide="server" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="font-sans font-bold text-xl text-neutral-900">
+                  Système opérationnel
+                </h3>
+                <p class="font-sans text-sm text-green-600 font-medium flex items-center gap-1">
+                  <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                  100% en ligne
+                </p>
+              </div>
+            </div>
+            <div class="space-y-4">
+              <div class="h-4 bg-neutral-100 rounded-full w-full"></div>
+              <div class="h-4 bg-neutral-100 rounded-full w-5/6"></div>
+              <div class="h-4 bg-neutral-100 rounded-full w-4/6"></div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-neutral-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+                  <i data-lucide="shield-check" class="w-4 h-4 text-green-600"></i>
+                </div>
+                <span class="text-sm font-medium text-neutral-600">
+                  Sécurité active
+                </span>
+              </div>
+              <span class="text-sm font-bold text-[#00AEEF]">Protégé</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="relative py-24 bg-neutral-50 border-t border-neutral-200 z-10">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="font-sans text-4xl font-bold tracking-tight text-neutral-900 mb-4">
+            Nos expertises
+          </h2>
+          <p class="font-sans text-xl text-neutral-600 max-w-2xl mx-auto">
+            Des solutions sur mesure pour garantir la performance et la sécurité
+            de votre infrastructure.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white border border-neutral-200 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-14 h-14 bg-[#EEF9FF] rounded-lg flex items-center justify-center text-[#00AEEF] mb-6">
+              <i data-lucide="cloud" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-sans text-xl font-bold text-neutral-900 mb-3">
+              Infogérance Cloud
+            </h3>
+            <p class="font-sans text-neutral-600 leading-relaxed">
+              Hébergement, gestion et optimisation de vos serveurs cloud pour
+              une disponibilité maximale.
+            </p>
+          </div>
+          <div class="bg-white border border-neutral-200 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-14 h-14 bg-[#F9FCE5] rounded-lg flex items-center justify-center text-[#A4D65E] mb-6">
+              <i data-lucide="shield-check" class="w-7 h-7 text-[#C4D600]"></i>
+            </div>
+            <h3 class="font-sans text-xl font-bold text-neutral-900 mb-3">
+              Sécurité &amp; Sauvegardes
+            </h3>
+            <p class="font-sans text-neutral-600 leading-relaxed">
+              Protection contre les cybermenaces et sauvegarde automatisée de
+              vos données critiques.
+            </p>
+          </div>
+          <div class="bg-white border border-neutral-200 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-14 h-14 bg-neutral-100 rounded-lg flex items-center justify-center text-neutral-600 mb-6">
+              <i data-lucide="headset" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-sans text-xl font-bold text-neutral-900 mb-3">
+              Support IT Réactif
+            </h3>
+            <p class="font-sans text-neutral-600 leading-relaxed">
+              Assistance technique rapide pour vos collaborateurs afin de
+              minimiser les interruptions de travail.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="relative py-24 bg-white z-10">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-12 gap-16 items-start">
+          <div class="lg:col-span-5 lg:sticky lg:top-32">
+            <h2 class="font-sans text-4xl font-bold tracking-tight text-neutral-900 mb-6">
+              Pourquoi BugZero ?
+            </h2>
+            <div class="w-20 h-1.5 bg-[#00AEEF] rounded-full mb-6"></div>
+            <p class="text-2xl text-neutral-800 font-semibold leading-snug">
+              Parce que chaque minute d’arrêt coûte de l’argent.
+            </p>
+            <p class="mt-4 text-lg text-neutral-600">
+              Nous comprenons les enjeux de votre entreprise. Notre approche est
+              proactive pour éviter les pannes avant qu'elles ne surviennent.
+            </p>
+          </div>
+          <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+            <div class="p-6 bg-neutral-50 border border-neutral-100 rounded-xl">
+              <div class="w-10 h-10 bg-white rounded-md shadow-sm border border-neutral-100 flex items-center justify-center text-[#00AEEF] mb-4">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-sans text-lg font-bold text-neutral-900 mb-2">
+                Réactivité 15 min
+              </h3>
+              <p class="text-neutral-600 text-sm leading-relaxed">
+                Intervention immédiate en cas d'urgence critique pour maintenir
+                votre activité.
+              </p>
+            </div>
+            <div class="p-6 bg-neutral-50 border border-neutral-100 rounded-xl">
+              <div class="w-10 h-10 bg-white rounded-md shadow-sm border border-neutral-100 flex items-center justify-center text-[#C4D600] mb-4">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-sans text-lg font-bold text-neutral-900 mb-2">
+                Experts Certifiés
+              </h3>
+              <p class="text-neutral-600 text-sm leading-relaxed">
+                Une équipe de techniciens et d'ingénieurs qualifiés sur les
+                dernières technologies.
+              </p>
+            </div>
+            <div class="p-6 bg-neutral-50 border border-neutral-100 rounded-xl">
+              <div class="w-10 h-10 bg-white rounded-md shadow-sm border border-neutral-100 flex items-center justify-center text-neutral-600 mb-4">
+                <i data-lucide="search" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-sans text-lg font-bold text-neutral-900 mb-2">
+                Transparence Totale
+              </h3>
+              <p class="text-neutral-600 text-sm leading-relaxed">
+                Des rapports clairs, pas de coûts cachés, et un suivi précis de
+                vos tickets.
+              </p>
+            </div>
+            <div class="p-6 bg-neutral-50 border border-neutral-100 rounded-xl">
+              <div class="w-10 h-10 bg-white rounded-md shadow-sm border border-neutral-100 flex items-center justify-center text-[#00AEEF] mb-4">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-sans text-lg font-bold text-neutral-900 mb-2">
+                Proximité Locale
+              </h3>
+              <p class="text-neutral-600 text-sm leading-relaxed">
+                Un partenaire de confiance proche de chez vous pour des
+                interventions sur site.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-24 bg-[#EEF9FF] border-y border-neutral-200">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="font-sans text-4xl font-bold tracking-tight text-neutral-900 mb-4">
+            Comment ça marche
+          </h2>
+          <p class="font-sans text-xl text-neutral-600 max-w-2xl mx-auto">
+            Une méthodologie simple et éprouvée pour sécuriser votre SI.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 relative">
+          <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-0.5 bg-[#00AEEF]/20 z-0"></div>
+          <div class="relative z-10 flex flex-col items-center text-center">
+            <div class="w-24 h-24 bg-white border-4 border-[#EEF9FF] rounded-full shadow-md flex items-center justify-center text-[#00AEEF] mb-6">
+              <span class="text-3xl font-bold">1</span>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-3">
+              Audit Offert
+            </h3>
+            <p class="text-neutral-600">
+              Analyse complète de votre infrastructure actuelle et
+              identification des vulnérabilités.
+            </p>
+          </div>
+          <div class="relative z-10 flex flex-col items-center text-center">
+            <div class="w-24 h-24 bg-[#00AEEF] border-4 border-[#EEF9FF] rounded-full shadow-md flex items-center justify-center text-white mb-6">
+              <span class="text-3xl font-bold">2</span>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-3">
+              Plan d'Action
+            </h3>
+            <p class="text-neutral-600">
+              Proposition sur mesure adaptée à vos besoins et à votre budget,
+              sans engagement.
+            </p>
+          </div>
+          <div class="relative z-10 flex flex-col items-center text-center">
+            <div class="w-24 h-24 bg-white border-4 border-[#EEF9FF] rounded-full shadow-md flex items-center justify-center text-[#C4D600] mb-6">
+              <span class="text-3xl font-bold">3</span>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-3">
+              Suivi Continu
+            </h3>
+            <p class="text-neutral-600">
+              Mise en place de la supervision et accompagnement quotidien par
+              nos équipes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="font-sans text-4xl font-bold tracking-tight text-neutral-900 mb-4">
+            Ils nous font confiance
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-8 bg-neutral-50 border border-neutral-100 rounded-2xl">
+            <div class="flex gap-1 text-[#C4D600] mb-4">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <p class="text-neutral-600 italic mb-6">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-neutral-200 rounded-full flex items-center justify-center text-neutral-400">
+                <i data-lucide="user" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="font-bold text-neutral-900">Jean Dupont</p>
+                <p class="text-sm text-neutral-500">Directeur, TechCorp</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 bg-neutral-50 border border-neutral-100 rounded-2xl">
+            <div class="flex gap-1 text-[#C4D600] mb-4">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <p class="text-neutral-600 italic mb-6">
+              "Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-neutral-200 rounded-full flex items-center justify-center text-neutral-400">
+                <i data-lucide="user" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="font-bold text-neutral-900">Marie Dubois</p>
+                <p class="text-sm text-neutral-500">Gérante, PME Solutions</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 bg-neutral-50 border border-neutral-100 rounded-2xl">
+            <div class="flex gap-1 text-[#C4D600] mb-4">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+            <p class="text-neutral-600 italic mb-6">
+              "Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident."
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-neutral-200 rounded-full flex items-center justify-center text-neutral-400">
+                <i data-lucide="user" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <p class="font-bold text-neutral-900">Pierre Martin</p>
+                <p class="text-sm text-neutral-500">CEO, InnovIT</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="relative py-32 px-6 bg-[#00AEEF] text-white z-10">
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h2 class="font-sans text-4xl lg:text-6xl font-bold tracking-tight mb-8">
+          Faites le premier pas vers une informatique sans bugs.
+        </h2>
+        <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+          Contactez-nous dès aujourd'hui pour votre audit gratuit et découvrez
+          comment nous pouvons optimiser votre infrastructure.
+        </p>
+        <a href="/contact" class="inline-flex items-center gap-3 px-10 py-5 bg-[#C4D600] text-neutral-900 font-sans font-bold text-xl rounded-lg hover:bg-[#b0c200] transition-transform hover:-translate-y-1 shadow-lg">
+          Je demande mon audit
+          <i data-lucide="arrow-right" class="w-6 h-6"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-neutral-200 bg-white py-16">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 text-neutral-600 font-sans">
+        <div class="md:col-span-2">
+          <div class="font-sans font-bold text-3xl tracking-tighter flex items-center select-none mb-6">
+            <span class="text-[#00AEEF]">BUG</span>
+            <span class="text-[#C4D600]">ZERO</span>
+          </div>
+          <p class="mb-6 max-w-sm">
+            Assistance &amp; Dépannage informatique express pour professionnels.
+            Votre informatique, notre sérénité.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="#" class="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center hover:bg-[#00AEEF] hover:text-white transition-colors">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center hover:bg-[#00AEEF] hover:text-white transition-colors">
+              <i data-lucide="twitter" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-neutral-900 mb-4 uppercase text-sm tracking-wider">
+            Services
+          </h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="/services" class="hover:text-[#00AEEF] transition-colors">
+                Infogérance Cloud
+              </a>
+            </li>
+            <li>
+              <a href="/services" class="hover:text-[#00AEEF] transition-colors">
+                Sécurité &amp; Sauvegardes
+              </a>
+            </li>
+            <li>
+              <a href="/services" class="hover:text-[#00AEEF] transition-colors">
+                Support IT Réactif
+              </a>
+            </li>
+            <li>
+              <a href="/services" class="hover:text-[#00AEEF] transition-colors">
+                Audit IT
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-neutral-900 mb-4 uppercase text-sm tracking-wider">
+            Contact
+          </h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-[#00AEEF] shrink-0 mt-0.5"></i>
+              <span>
+                123 Avenue de la Tech
+                <br>
+                75000 Paris
+              </span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i data-lucide="phone" class="w-5 h-5 text-[#00AEEF] shrink-0"></i>
+              <span>01 23 45 67 89</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i data-lucide="mail" class="w-5 h-5 text-[#00AEEF] shrink-0"></i>
+              <span>contact@bugzero.fr</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-6 border-t border-neutral-100 mt-12 pt-8 text-sm text-neutral-500 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>© 2024 BugZero. Tous droits réservés.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-neutral-900">Mentions légales</a>
+          <a href="#" class="hover:text-neutral-900">
+            Politique de confidentialité
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  
+</body></html>

@@ -1,0 +1,20 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  buttonLabel: string;
+  buttonHref?: string;
+}
+const { title, description, buttonLabel, buttonHref = "/contact" } = Astro.props;
+---
+
+<section class="relative py-32 px-6 bg-[#00AEEF] text-white z-10">
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+    <h2 class="font-sans text-4xl lg:text-6xl font-bold tracking-tight mb-8">{title}</h2>
+    <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">{description}</p>
+    <a href={buttonHref} class="inline-flex items-center gap-3 px-10 py-5 bg-[#C4D600] text-neutral-900 font-sans font-bold text-xl rounded-lg hover:bg-[#b0c200] transition-transform hover:-translate-y-1 shadow-lg">
+      {buttonLabel}
+      <i data-lucide="arrow-right" class="w-6 h-6"></i>
+    </a>
+  </div>
+</section>

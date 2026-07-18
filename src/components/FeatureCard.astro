@@ -1,0 +1,19 @@
+---
+export interface Props {
+  icon: string;
+  iconBg?: string;
+  iconColor?: string;
+  title: string;
+  description: string;
+}
+
+const { icon, iconBg = "bg-white", iconColor = "text-[#00AEEF]", title, description } = Astro.props;
+---
+
+<div class="p-6 bg-neutral-50 border border-neutral-100 rounded-xl">
+  <div class={`w-10 h-10 ${iconBg} rounded-md shadow-sm border border-neutral-100 flex items-center justify-center ${iconColor} mb-4`}>
+    <i data-lucide={icon} class="w-5 h-5"></i>
+  </div>
+  <h3 class="font-sans text-lg font-bold text-neutral-900 mb-2">{title}</h3>
+  <p class="text-neutral-600 text-sm leading-relaxed">{description}</p>
+</div>

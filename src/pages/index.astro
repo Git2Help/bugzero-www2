@@ -1,0 +1,140 @@
+---
+import Layout from "../components/Layout.astro";
+import Header from "../components/Header.astro";
+import HeroSection from "../components/HeroSection.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import FeatureCard from "../components/FeatureCard.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import StepSection from "../components/StepSection.astro";
+import TestimonialCard from "../components/TestimonialCard.astro";
+import CtaSection from "../components/CtaSection.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+  <Header />
+
+  <!-- Hero Section -->
+  <HeroSection
+    badge="TPE • PME • ETI"
+    title="Votre informatique,"
+    titleHighlight="notre sérénité."
+    description="BugZero prend en charge vos serveurs, votre sécurité et votre support informatique. Concentrez-vous sur votre métier, nous nous occupons du reste."
+    ctaPrimary={{ label: "Demander un audit", href: "/contact" }}
+    ctaSecondary={{ label: "Nos services", href: "/services" }}
+    showStatusCard={true}
+  />
+
+  <!-- Services Section -->
+  <section id="services" class="relative py-24 bg-neutral-50 border-t border-neutral-200 z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <SectionHeader
+        title="Nos expertises"
+        description="Des solutions sur mesure pour garantir la performance et la sécurité de votre infrastructure."
+      />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <ServiceCard
+          icon="cloud"
+          title="Infogérance Cloud"
+          description="Hébergement, gestion et optimisation de vos serveurs cloud pour une disponibilité maximale."
+        />
+        <ServiceCard
+          icon="shield-check"
+          iconBg="bg-[#F9FCE5]"
+          iconColor="text-[#C4D600]"
+          title="Sécurité &amp; Sauvegardes"
+          description="Protection contre les cybermenaces et sauvegarde automatisée de vos données critiques."
+        />
+        <ServiceCard
+          icon="headset"
+          iconBg="bg-neutral-100"
+          iconColor="text-neutral-600"
+          title="Support IT Réactif"
+          description="Assistance technique rapide pour vos collaborateurs afin de minimiser les interruptions de travail."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="relative py-24 bg-white z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-16 items-start">
+        <div class="lg:col-span-5 lg:sticky lg:top-32">
+          <h2 class="font-sans text-4xl font-bold tracking-tight text-neutral-900 mb-6">Pourquoi BugZero ?</h2>
+          <div class="w-20 h-1.5 bg-[#00AEEF] rounded-full mb-6"></div>
+          <p class="text-2xl text-neutral-800 font-semibold leading-snug">Parce que chaque minute d'arrêt coûte de l'argent.</p>
+          <p class="mt-4 text-lg text-neutral-600">Nous comprenons les enjeux de votre entreprise. Notre approche est proactive pour éviter les pannes avant qu'elles ne surviennent.</p>
+        </div>
+        <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+          <FeatureCard
+            icon="clock"
+            title="Réactivité 15 min"
+            description="Intervention immédiate en cas d'urgence critique pour maintenir votre activité."
+          />
+          <FeatureCard
+            icon="award"
+            iconColor="text-[#C4D600]"
+            title="Experts Certifiés"
+            description="Une équipe de techniciens et d'ingénieurs qualifiés sur les dernières technologies."
+          />
+          <FeatureCard
+            icon="search"
+            iconColor="text-neutral-600"
+            title="Transparence Totale"
+            description="Des rapports clairs, pas de coûts cachés, et un suivi précis de vos tickets."
+          />
+          <FeatureCard
+            icon="map-pin"
+            title="Proximité Locale"
+            description="Un partenaire de confiance proche de chez vous pour des interventions sur site."
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step Section -->
+  <StepSection
+    title="Comment ça marche"
+    description="Une méthodologie simple et éprouvée pour sécuriser votre SI."
+    steps={[
+      { number: "1", title: "Audit Offert", description: "Analyse complète de votre infrastructure actuelle et identification des vulnérabilités." },
+      { number: "2", title: "Plan d'Action", description: "Proposition sur mesure adaptée à vos besoins et à votre budget, sans engagement.", circled: true },
+      { number: "3", title: "Suivi Continu", description: "Mise en place de la supervision et accompagnement quotidien par nos équipes." },
+    ]}
+  />
+
+  <!-- Testimonials -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <SectionHeader title="Ils nous font confiance" />
+      <div class="grid md:grid-cols-3 gap-8">
+        <TestimonialCard
+          quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+          name="Jean Dupont"
+          role="Directeur, TechCorp"
+        />
+        <TestimonialCard
+          quote="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit."
+          name="Marie Dubois"
+          role="Gérante, PME Solutions"
+        />
+        <TestimonialCard
+          quote="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+          name="Pierre Martin"
+          role="CEO, InnovIT"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CtaSection
+    title="Faites le premier pas vers une informatique sans bugs."
+    description="Contactez-nous dès aujourd'hui pour votre audit gratuit et découvrez comment nous pouvons optimiser votre infrastructure."
+    buttonLabel="Je demande mon audit"
+  />
+
+  <Footer />
+</Layout>
