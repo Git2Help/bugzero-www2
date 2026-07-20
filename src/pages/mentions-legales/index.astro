@@ -1,0 +1,42 @@
+---
+import Layout from "../../components/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="BugZero | Mentions légales">
+  <Header />
+
+  <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 z-10">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="font-sans text-4xl lg:text-5xl font-bold text-neutral-900 mb-12 text-center">Mentions legales</h1>
+      <div class="space-y-8 text-neutral-600">
+        <div>
+          <h2 class="font-bold text-xl text-neutral-900 mb-3">Editeur du site</h2>
+          <p>Bugzero est une marque de Helperiance.</p>
+          <p>Siège social : 9, Allée Lazare Sauvaigo, 98000 Monaco</p>
+          <p>Email : bonjour@bugzero.fr</p>
+          <p>Telephone : 06 78 56 54 30</p>
+        </div>
+        <div>
+          <h2 class="font-bold text-xl text-neutral-900 mb-3">Directeur de la publication</h2>
+          <p>Johan CHAUVET, CEO</p>
+        </div>
+        <div>
+          <h2 class="font-bold text-xl text-neutral-900 mb-3">Hébergement</h2>
+          <p>Ce site est hébergé par Cloudflare Pages.</p>
+        </div>
+        <div>
+          <h2 class="font-bold text-xl text-neutral-900 mb-3">Propriété intellectuelle</h2>
+          <p>L'ensemble du contenu de ce site (textes, images, logos) est la propriété exclusive de Helperiance. Toute reproduction ou utilisation sans autorisation est interdite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer
+    address="9, Allée Lazare Sauvaigo<br/>98000 Monaco"
+    phone="06 78 56 54 30"
+    email="bonjour@bugzero.fr"
+  />
+</Layout>
