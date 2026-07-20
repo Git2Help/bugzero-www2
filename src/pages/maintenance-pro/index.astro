@@ -1,0 +1,85 @@
+---
+import Layout from "../../components/Layout.astro";
+import Header from "../../components/Header.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import CtaSection from "../../components/CtaSection.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="BugZero | Maintenance Pro">
+  <Header />
+
+  <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 z-10">
+    <div class="max-w-7xl mx-auto">
+      <SectionHeader
+        title="Votre service IT dedie, sans le salaire. Des 59 euros HT/mois."
+        description="Surveillance 24/7, antivirus, sauvegardes et support inclus."
+      />
+      <div class="text-center mt-8">
+        <a href="#formules" class="inline-block px-10 py-5 bg-[#00AEEF] text-white font-sans font-bold text-xl rounded-lg hover:bg-[#0090C0] transition-transform hover:-translate-y-1 shadow-lg">
+          Comparer les formules
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="formules" class="py-24 bg-neutral-50 border-t border-neutral-200">
+    <div class="max-w-7xl mx-auto px-6">
+      <SectionHeader title="Tableau comparatif" />
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="bg-white border border-neutral-200 rounded-xl p-8 shadow-sm">
+          <h3 class="font-sans text-xl font-bold text-neutral-900 mb-2">Supervision-Assistance</h3>
+          <p class="text-3xl font-bold text-[#00AEEF] mb-4">59 euros<span class="text-base font-normal text-neutral-500">/mois</span></p>
+          <p class="text-neutral-600 text-sm">Supervision automatique, antivirus Bitdefender, sauvegarde MSP360. L'essentiel pour demarrer.</p>
+        </div>
+        <div class="bg-white border border-neutral-200 rounded-xl p-8 shadow-sm">
+          <h3 class="font-sans text-xl font-bold text-neutral-900 mb-2">Liberte</h3>
+          <p class="text-3xl font-bold text-[#00AEEF] mb-4">79 euros<span class="text-base font-normal text-neutral-500">/mois</span></p>
+          <p class="text-neutral-600 text-sm">+1 appel/mois, 6 tickets, assistance a distance. Un pas vers la tranquillite.</p>
+        </div>
+        <div class="bg-white border border-neutral-200 rounded-xl p-8 shadow-sm">
+          <h3 class="font-sans text-xl font-bold text-neutral-900 mb-2">Puissance</h3>
+          <p class="text-3xl font-bold text-[#00AEEF] mb-4">149 euros<span class="text-base font-normal text-neutral-500">/mois</span></p>
+          <p class="text-neutral-600 text-sm">+3 appels, 3h sur site Monaco/PACA. Pour les equipes actives.</p>
+        </div>
+        <div class="bg-white border-2 border-[#00AEEF] rounded-xl p-8 shadow-md">
+          <div class="inline-block px-3 py-1 bg-[#EEF9FF] text-[#00AEEF] text-xs font-bold uppercase rounded-full mb-2">TOP</div>
+          <h3 class="font-sans text-xl font-bold text-neutral-900 mb-2">Illimitee</h3>
+          <p class="text-3xl font-bold text-[#00AEEF] mb-4">249 euros<span class="text-base font-normal text-neutral-500">/mois</span></p>
+          <p class="text-neutral-600 text-sm">Appels illimites, 1 journee de presence sur site/mois. La totale serenite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="font-sans text-3xl font-bold text-neutral-900 mb-6">Pourquoi choisir Bugzero</h2>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-neutral-700">Reponse en moins de 2h en heures ouvrees</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-neutral-700">Antivirus nouvelle generation anti-ransomware</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-neutral-700">Sauvegardes cloud automatiques, restaurables en un clic</span></li>
+          </ul>
+        </div>
+        <div class="bg-neutral-50 border border-neutral-100 rounded-xl p-8">
+          <p class="text-lg italic text-neutral-600 mb-4">&laquo; Depuis que Bugzero gere notre maintenance, on n'a plus jamais perdu un fichier. &raquo;</p>
+          <p class="font-bold text-neutral-900">Cabinet comptable, Nice</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaSection
+    title="Je choisis ma formule"
+    description="Trouvez celle qui correspond a vos besoins."
+    buttonLabel="Comparer les formules"
+  />
+
+  <Footer
+    address="9, Allee Lazare Sauvaigo<br/>98000 Monaco"
+    phone="06 78 56 54 30"
+    email="bonjour@bugzero.fr"
+  />
+</Layout>

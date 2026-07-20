@@ -1,0 +1,66 @@
+---
+import Layout from "../../components/Layout.astro";
+import Header from "../../components/Header.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import CtaSection from "../../components/CtaSection.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="BugZero | Infogerance">
+  <Header />
+
+  <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 z-10">
+    <div class="max-w-7xl mx-auto">
+      <SectionHeader
+        title="Toute votre informatique externalisee. Zero souci."
+        description="Installation, gestion, securite, depannage. Un interlocuteur unique."
+      />
+      <div class="text-center mt-8">
+        <a href="/contact" class="inline-block px-10 py-5 bg-[#00AEEF] text-white font-sans font-bold text-xl rounded-lg hover:bg-[#0090C0] transition-transform hover:-translate-y-1 shadow-lg">
+          Je veux un devis
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white border-t border-neutral-200">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="font-sans text-3xl font-bold text-neutral-900 mb-6">Le Pack Infogerance comprend</h2>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-neutral-700">Audit initial de votre infrastructure</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-neutral-700">Installation et configuration des postes, reseau, logiciels</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-neutral-700">Maintenance preventive et corrective</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-neutral-700">Sauvegarde externalisee HelpBackup (pilote par Bugzero)</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-neutral-700">Support reactif et tickets illimites</span></li>
+          </ul>
+        </div>
+        <div class="bg-neutral-50 border border-neutral-100 rounded-xl p-8">
+          <h3 class="font-bold text-xl text-neutral-900 mb-6">Ideal pour</h3>
+          <ul class="space-y-3 text-neutral-700">
+            <li class="flex items-center gap-3"><i data-lucide="users" class="w-5 h-5 text-[#00AEEF] shrink-0"></i> Les TPE/PME sans service informatique</li>
+            <li class="flex items-center gap-3"><i data-lucide="rocket" class="w-5 h-5 text-[#00AEEF] shrink-0"></i> Les createurs d'entreprise qui veulent du cle-en-main</li>
+            <li class="flex items-center gap-3"><i data-lucide="shield" class="w-5 h-5 text-[#00AEEF] shrink-0"></i> Les cabinets ayant des besoins de conformite (RGPD)</li>
+          </ul>
+          <div class="mt-8 pt-8 border-t border-neutral-200">
+            <p class="text-lg italic text-neutral-600 mb-4">&laquo; On a externalise tout le support a Bugzero. Meilleure decision de l'annee. &raquo;</p>
+            <p class="font-bold text-neutral-900">Agence de communication, Monaco</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaSection
+    title="Parler a un expert"
+    description="Decouvrez comment l'infogerance Bugzero peut simplifier votre quotidien."
+    buttonLabel="Je veux un devis"
+  />
+
+  <Footer
+    address="9, Allee Lazare Sauvaigo<br/>98000 Monaco"
+    phone="06 78 56 54 30"
+    email="bonjour@bugzero.fr"
+  />
+</Layout>

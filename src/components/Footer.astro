@@ -5,7 +5,7 @@ export interface Props {
   email?: string;
 }
 
-const { address = "123 Avenue de la Tech<br/>75000 Paris", phone = "01 23 45 67 89", email = "contact@bugzero.fr" } = Astro.props;
+const { address = "9, Allee Lazare Sauvaigo<br/>98000 Monaco", phone = "06 78 56 54 30", email = "bonjour@bugzero.fr" } = Astro.props;
 ---
 
 <footer class="relative z-10 border-t border-neutral-200 bg-white py-16">
@@ -16,8 +16,7 @@ const { address = "123 Avenue de la Tech<br/>75000 Paris", phone = "01 23 45 67 
         <span class="text-[#C4D600]">ZERO</span>
       </div>
       <p class="mb-6 max-w-sm">
-        Assistance & Dépannage informatique express pour professionnels.
-        Votre informatique, notre sérénité.
+        Depannage &amp; infogerance informatique pour particuliers et professionnels a Monaco, Nice et Menton.
       </p>
       <div class="flex items-center gap-4">
         <a href="#" class="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center hover:bg-[#00AEEF] hover:text-white transition-colors">
@@ -31,10 +30,10 @@ const { address = "123 Avenue de la Tech<br/>75000 Paris", phone = "01 23 45 67 
     <div>
       <h4 class="font-bold text-neutral-900 mb-4 uppercase text-sm tracking-wider">Services</h4>
       <ul class="space-y-3">
-        <li><a href="/professionnel" class="hover:text-[#00AEEF] transition-colors">Infogérance Cloud</a></li>
-        <li><a href="/professionnel" class="hover:text-[#00AEEF] transition-colors">Sécurité & Sauvegardes</a></li>
-        <li><a href="/professionnel" class="hover:text-[#00AEEF] transition-colors">Support IT Réactif</a></li>
-        <li><a href="/professionnel" class="hover:text-[#00AEEF] transition-colors">Audit IT</a></li>
+        <li><a href="/professionnel" class="hover:text-[#00AEEF] transition-colors">Infogerance</a></li>
+        <li><a href="/audit-securite" class="hover:text-[#00AEEF] transition-colors">Audit de securite</a></li>
+        <li><a href="/maintenance-pro" class="hover:text-[#00AEEF] transition-colors">Maintenance Pro</a></li>
+        <li><a href="/creation-site" class="hover:text-[#00AEEF] transition-colors">Creation de site</a></li>
       </ul>
     </div>
     <div>
@@ -56,10 +55,10 @@ const { address = "123 Avenue de la Tech<br/>75000 Paris", phone = "01 23 45 67 
     </div>
   </div>
   <div class="max-w-7xl mx-auto px-6 border-t border-neutral-100 mt-12 pt-8 text-sm text-neutral-500 flex flex-col md:flex-row justify-between items-center gap-4">
-    <p>© 2024 BugZero. Tous droits réservés.</p>
+    <p>© 2024 BugZero. Tous droits reserves.</p>
     <div class="flex gap-6">
-      <a href="#" class="hover:text-neutral-900">Mentions légales</a>
-      <a href="#" class="hover:text-neutral-900">Politique de confidentialité</a>
+      <a href="#" class="hover:text-neutral-900">Mentions legales</a>
+      <a href="#" class="hover:text-neutral-900">Politique de confidentialite</a>
     </div>
   </div>
 </footer>

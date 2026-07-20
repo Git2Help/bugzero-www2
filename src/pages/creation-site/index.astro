@@ -1,0 +1,80 @@
+---
+import Layout from "../../components/Layout.astro";
+import Header from "../../components/Header.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import FeatureCard from "../../components/FeatureCard.astro";
+import CtaSection from "../../components/CtaSection.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="BugZero | Creation de site">
+  <Header />
+
+  <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 z-10">
+    <div class="max-w-7xl mx-auto">
+      <SectionHeader
+        title="Un site internet qui vous rapporte des clients. Cree sur mesure."
+        description="Jusqu'a 70% de subvention grace au Fonds Bleu Monaco. 2 mois de maintenance offerts."
+      />
+      <div class="text-center mt-8">
+        <a href="/contact" class="inline-block px-10 py-5 bg-[#00AEEF] text-white font-sans font-bold text-xl rounded-lg hover:bg-[#0090C0] transition-transform hover:-translate-y-1 shadow-lg">
+          Je veux mon site
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white border-t border-neutral-200">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="font-sans text-3xl font-bold text-neutral-900 mb-6">Ce que nous creons pour vous</h2>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-neutral-700">Sites vitrines, e-commerce, reservation en ligne</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-neutral-700">Design responsive, optimise mobile</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-neutral-700">Referencement SEO integre (mots-cles, contenu, balisage)</span></li>
+            <li class="flex items-center gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-neutral-700">Formulaires de contact, liens reseaux sociaux, blog</span></li>
+          </ul>
+        </div>
+        <div class="bg-neutral-50 border border-neutral-100 rounded-xl p-8">
+          <h3 class="font-bold text-xl text-neutral-900 mb-6">Votre projet en 3 etapes</h3>
+          <ol class="space-y-6">
+            <li class="flex gap-4">
+              <span class="w-10 h-10 bg-[#00AEEF] text-white rounded-full flex items-center justify-center font-bold shrink-0">1</span>
+              <div><p class="font-bold text-neutral-900">Brief decouverte (gratuit, 30 min)</p></div>
+            </li>
+            <li class="flex gap-4">
+              <span class="w-10 h-10 bg-[#00AEEF] text-white rounded-full flex items-center justify-center font-bold shrink-0">2</span>
+              <div><p class="font-bold text-neutral-900">Maquette et validation sous 7 jours</p></div>
+            </li>
+            <li class="flex gap-4">
+              <span class="w-10 h-10 bg-[#00AEEF] text-white rounded-full flex items-center justify-center font-bold shrink-0">3</span>
+              <div><p class="font-bold text-neutral-900">Mise en ligne et formation a la mise a jour</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-[#EEF9FF]">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="font-sans text-3xl font-bold text-neutral-900 mb-6">Fonds Bleu</h2>
+      <p class="text-lg text-neutral-600 mb-8">Vous etes une entreprise monegasque ? L'Etat prend en charge 30 a 70% du cout. Nous montons le dossier avec vous.</p>
+      <p class="text-2xl italic text-neutral-600 mb-4">&laquo; Bugzero a cree notre boutique en ligne en 3 semaines. Nos ventes ont triple. &raquo;</p>
+      <p class="font-bold text-lg text-neutral-900">Commercant a Monaco</p>
+    </div>
+  </section>
+
+  <CtaSection
+    title="Demarrer mon projet"
+    description="Un site qui vous ressemble, un financement qui vous aide."
+    buttonLabel="Je veux mon site"
+  />
+
+  <Footer
+    address="9, Allee Lazare Sauvaigo<br/>98000 Monaco"
+    phone="06 78 56 54 30"
+    email="bonjour@bugzero.fr"
+  />
+</Layout>
