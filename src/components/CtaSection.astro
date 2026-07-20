@@ -5,7 +5,7 @@ export interface Props {
   buttonLabel: string;
   buttonHref?: string;
 }
-const { title, description, buttonLabel, buttonHref = "/contact" } = Astro.props;
+const { title, description, buttonLabel, buttonHref = "/contact/" } = Astro.props;
 ---
 
 <section class="relative py-32 px-6 bg-[#00AEEF] text-white z-10">
