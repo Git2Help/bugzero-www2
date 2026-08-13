@@ -46,20 +46,68 @@ import Footer from "../../components/Footer.astro";
         </div>
         <div class="bg-white border border-neutral-200 rounded-xl p-8 shadow-sm">
           <h3 class="font-bold text-xl text-neutral-900 mb-6">Envoyez-nous un message</h3>
-          <form class="space-y-4">
+          <form id="contact-form" class="space-y-4">
+            <input type="hidden" name="template" value="www2">
+            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
             <div>
-              <input type="text" placeholder="Nom" class="w-full border border-neutral-200 rounded-lg px-4 py-3 text-sm">
+              <input type="text" name="name" id="name" placeholder="Nom" required class="w-full border border-neutral-200 rounded-lg px-4 py-3 text-sm">
             </div>
             <div>
-              <input type="email" placeholder="Email" class="w-full border border-neutral-200 rounded-lg px-4 py-3 text-sm">
+              <input type="email" name="email" id="email" placeholder="Email" required class="w-full border border-neutral-200 rounded-lg px-4 py-3 text-sm">
             </div>
             <div>
-              <textarea placeholder="Votre message" rows="4" class="w-full border border-neutral-200 rounded-lg px-4 py-3 text-sm"></textarea>
+              <input type="tel" name="phone" id="phone" placeholder="Téléphone (optionnel)" class="w-full border border-neutral-200 rounded-lg px-4 py-3 text-sm">
+            </div>
+            <div>
+              <textarea name="message" id="message" placeholder="Votre message" rows="4" required class="w-full border border-neutral-200 rounded-lg px-4 py-3 text-sm"></textarea>
             </div>
             <button type="submit" class="w-full px-8 py-4 bg-[#00AEEF] text-white font-sans font-medium text-lg rounded-md hover:bg-[#0090C0] transition-all">
               Envoyer
             </button>
           </form>
+          <div id="contact-success" style="display:none" class="mt-4 p-6 rounded-lg text-center bg-[#EEF9FF]">
+            <p class="text-sm font-medium text-[#00AEEF]">Merci pour votre message, il a bien été transmis.</p>
+            <p class="text-xs mt-2 text-neutral-500">Nous vous répondons dans l'heure.</p>
+          </div>
+          <div id="contact-error" style="display:none" class="mt-4 p-4 rounded-lg bg-red-50">
+            <p class="text-sm font-medium text-red-600" id="contact-error-msg"></p>
+          </div>
+          <script>
+            const form = document.getElementById('contact-form');
+            const successMsg = document.getElementById('contact-success');
+            const errorMsg = document.getElementById('contact-error');
+            const errorMsgText = document.getElementById('contact-error-msg');
+            form.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              const formData = new FormData(form);
+              const data = Object.fromEntries(formData);
+              const btn = form.querySelector('button[type="submit"]');
+              btn.disabled = true;
+              btn.textContent = 'Envoi en cours...';
+              try {
+                const res = await fetch('https://automate.bugzero.fr/webhook/contact-bugzero', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(data)
+                });
+                const result = await res.json();
+                if (result.success) {
+                  form.style.display = 'none';
+                  successMsg.style.display = 'block';
+                } else {
+                  errorMsgText.textContent = result.message || 'Veuillez remplir tous les champs obligatoires.';
+                  errorMsg.style.display = 'block';
+                  btn.disabled = false;
+                  btn.textContent = 'Envoyer';
+                }
+              } catch (err) {
+                errorMsgText.textContent = 'Une erreur est survenue. Veuillez réessayer ou nous appeler au 06 78 56 54 30.';
+                errorMsg.style.display = 'block';
+                btn.disabled = false;
+                btn.textContent = 'Envoyer';
+              }
+            });
+          </script>
         </div>
       </div>
     </div>
